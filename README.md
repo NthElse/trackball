@@ -1,4 +1,6 @@
-# 🖲️ trackball
+# 🖲️ Project Trackball
+
+A [todo.txt](http://todotxt.org/) desktop app. Written in C++ & QtQuick.
 
 ------
 
