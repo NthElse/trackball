@@ -1,0 +1,31 @@
+name: Build on MacOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get latest CMake and ninja
+      uses: lukka/get-cmake@latest 
+    - name: Cache Qt
+      id: cache-qt
+      uses: actions/cache@v1
+      with:
+        path: ../Qt
+        key: ${{ runner.os }}-QtCache
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - name: build
+      run: |
+        mkdir build
+        cd build
+        cmake .. -GNinja
+        cmake --build .
