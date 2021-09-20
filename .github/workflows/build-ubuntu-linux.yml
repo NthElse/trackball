@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Get latest CMake and ninja
+      uses: lukka/get-cmake@latest 
     - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v1
@@ -25,9 +27,5 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
-        make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+        cmake .. -GNinja
+        cmake --build .
