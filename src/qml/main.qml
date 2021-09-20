@@ -33,6 +33,11 @@ Qaterial.ApplicationWindow {
         }
     }
 
+    TodoList {
+        anchors.fill: parent
+        id: todoList
+    }
+
     // Save and restore x, y, width, height
     Qaterial.WindowLayoutSave {}
 

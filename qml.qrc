@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file alias="main.qml">src/qml/main.qml</file>
         <file alias="AboutWindow.qml">src/qml/AboutWindow.qml</file>
+        <file alias="TodoList.qml">src/qml/TodoList.qml</file>
+        <file alias="TodoListItem.qml">src/qml/TodoListItem.qml</file>
     </qresource>
 </RCC>
