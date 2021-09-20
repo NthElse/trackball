@@ -26,6 +26,9 @@ FetchContent_MakeAvailable(Qaterial)
 
 set(PROJECT_SOURCES
         src/main.cpp
+        src/TodoListItem.h
+        src/TodoListModel.h
+        src/TodoListModel.cpp
         qml.qrc
 )
 

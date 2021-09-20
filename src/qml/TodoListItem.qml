@@ -42,7 +42,7 @@ Item {
                            }
                 }
                 Label {
-                    text: desc
+                    text: description
                 }
             }
         }
