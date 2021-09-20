@@ -26,7 +26,10 @@ public:
 private:
     QVector<TodoListItem> mlist
     {
-        {"desc", "A", true}
+        {"desc", "A", true},
+        {"Test", "B", true},
+        {"Test", "B", false},
+        {"Test", "", false},
     };
 };
 

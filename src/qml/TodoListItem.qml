@@ -23,16 +23,12 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 Qaterial.CheckButton {
                     checked: finished
+                    spacing: 0
+                    verticalPadding: 0
                 }
-                Qaterial.Icon {
-                    icon: if (priority == "A") {
-                              Qaterial.Icons.alphaACircle
-                          } else if (priority == "B") {
-                              Qaterial.Icons.alphaBCircle
-                          } else if (priority == "C") {
-                              Qaterial.Icons.alphaCCircle
-                          }
-                    size: 36
+                Qaterial.Label {
+                    text: if (priority) { "<b>(" + priority + ")</b>" }
+                    font.family: "Lato"
                     color: if (priority == "A") {
                                "#E91E63"
                            } else if (priority == "B") {
@@ -41,8 +37,9 @@ Item {
                                "#2196F3"
                            }
                 }
-                Label {
+                Qaterial.Label {
                     text: description
+                    font.family: "Lato"
                 }
             }
         }
