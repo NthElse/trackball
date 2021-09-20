@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5
 import Qaterial 1.0 as Qaterial
 
@@ -6,25 +7,34 @@ Item {
     ListModel {
         id: mymodel
         ListElement {
-            name: "Bill Smith"
-            number: "555 3264"
+            finished: false
+            priority: "A"
+            desc: "做语文作业"
         }
         ListElement {
-            name: "John Brown"
-            number: "555 8426"
+            finished: false
+            priority: "B"
+            desc: "Do English homework"
         }
         ListElement {
-            name: "Sam Wise"
-            number: "555 0473"
+            finished: true
+            priority: "C"
+            desc: "1+1=2"
+        }
+        ListElement {
+            finish: true
+            desc: "s=vt"
         }
     }
 
-
-    Column {
+    ColumnLayout {
         anchors.fill: parent
-        spacing: 4
+        anchors.topMargin: 10
+        anchors.leftMargin: 10
+        anchors.rightMargin: 10
+        width: parent.width
+        spacing: 20
         Repeater {
-            width: parent.width
             model: mymodel
             delegate: TodoListItem {}
         }

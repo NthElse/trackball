@@ -2,6 +2,8 @@
 
 A [todo.txt](http://todotxt.org/) desktop app. Written in C++ & Qt Quick.
 
+![](./assets/ss.png)
+
 ## Dependencies
 
 - Qt 5

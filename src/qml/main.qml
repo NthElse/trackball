@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.5
+import QtQuick.Layouts 1.3
 import Qaterial 1.0 as Qaterial
 
 Qaterial.ApplicationWindow {
@@ -11,6 +12,8 @@ Qaterial.ApplicationWindow {
     minimumWidth: 100
     minimumHeight: 100
 
+    onWidthChanged: console.log(width)
+
     menuBar: Qaterial.MenuBar {
         Qaterial.Menu {
             title: qsTr("File")
@@ -18,7 +21,7 @@ Qaterial.ApplicationWindow {
                 text: qsTr("Quit")
                 onTriggered: Qt.quit()
             }
-            Qaterial.MenuSeparator { }
+            Qaterial.MenuSeparator {}
             Qaterial.MenuItem {
                 text: "Style"
                 onTriggered: themeDialog.open()
@@ -34,7 +37,7 @@ Qaterial.ApplicationWindow {
     }
 
     TodoList {
-        anchors.fill: parent
+        width: window.width
         id: todoList
     }
 
