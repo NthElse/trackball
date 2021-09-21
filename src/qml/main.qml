@@ -35,8 +35,22 @@ Qaterial.ApplicationWindow {
     }
 
     TodoList {
-        width: window.width
         id: todoList
+        width: window.width
+    }
+
+    Qaterial.FabButton {
+        id: createButton
+        icon.source: Qaterial.Icons.plus
+
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.margins: 20
+
+        highlighted: true
+        enabled: true
+        enabledScale: true
+        extendedOnHovered: true
     }
 
     // Save and restore x, y, width, height
