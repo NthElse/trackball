@@ -12,8 +12,6 @@ Qaterial.ApplicationWindow {
     minimumWidth: 100
     minimumHeight: 100
 
-    onWidthChanged: console.log(width)
-
     menuBar: Qaterial.MenuBar {
         Qaterial.Menu {
             title: qsTr("File")

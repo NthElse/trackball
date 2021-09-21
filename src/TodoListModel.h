@@ -28,8 +28,12 @@ private:
     {
         {"desc", "A", true},
         {"Test", "B", true},
-        {"Test", "B", false},
+        {"Test", "C", false},
         {"Test", "", false},
+        {"desc", "A", true},
+        {"Test", "B", true},
+        {"Test", "C", false},
+        {"Test", "", false}
     };
 };
 

@@ -1,24 +1,28 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
+import QtGraphicalEffects 1.12
 import Qaterial 1.0 as Qaterial
 
 Item {
-    width: parent.width
+    width: parent.width-20
     height: 50
 
     Rectangle {
         id: bg
         width: parent.width
         height: parent.height
-        color: "#FAFAFA"
-        radius: 3
+        color: mouseArea.containsMouse ? Qaterial.Style.colorTheme.background1 : Qaterial.Style.colorTheme.background12
+        radius: Qaterial.Style.card.radius
+        layer.enabled: mouseArea.containsMouse
+        layer.effect: Qaterial.ElevationEffect {
+            elevation: 3
+        }
         MouseArea {
+            id: mouseArea
             hoverEnabled: true
             anchors.fill: parent
-            onHoveredChanged: {
-                bg.color = containsMouse ? "#F5F5F5" : "#FAFAFA"
-            }
+
             RowLayout {
                 anchors.verticalCenter: parent.verticalCenter
                 Qaterial.CheckButton {
@@ -30,11 +34,11 @@ Item {
                     text: if (priority) { "<b>(" + priority + ")</b>" }
                     font.family: "Lato"
                     color: if (priority == "A") {
-                               "#E91E63"
+                               Qaterial.Colors.red
                            } else if (priority == "B") {
-                               "#FFC107"
+                               Qaterial.Colors.orange
                            } else if (priority == "C") {
-                               "#2196F3"
+                               Qaterial.Colors.blue
                            }
                 }
                 Qaterial.Label {

@@ -4,16 +4,15 @@ import QtQuick.Controls 2.5
 import Qaterial 1.0 as Qaterial
 
 Item {
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.topMargin: 10
-        anchors.leftMargin: 10
-        anchors.rightMargin: 10
+    anchors.fill: parent
+    anchors.margins: 10
+
+    ListView {
         width: parent.width
-        spacing: 20
-        Repeater {
-            model: todoListModel
-            delegate: TodoListItem {}
-        }
+        height: parent.height
+        model: todoListModel
+        delegate: TodoListItem {}
+        spacing: 5
+        ScrollBar.vertical: ScrollBar {}
     }
 }
