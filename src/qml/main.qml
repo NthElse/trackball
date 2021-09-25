@@ -34,9 +34,29 @@ Qaterial.ApplicationWindow {
         }
     }
 
-    TodoList {
-        id: todoList
-        width: window.width
+    Column {
+        anchors.fill: parent
+        anchors.margins: 10
+
+        Row {
+            Qaterial.OutlineButton {
+                text: "Create"
+                id: createOutButton
+                icon.source: Qaterial.Icons.plus
+            }
+            Qaterial.OutlineButton {
+                text: "Search"
+                id: searchOutButton
+                icon.source: Qaterial.Icons.magnify
+            }
+        }
+
+        TodoList {
+            id: todoList
+            clip: true
+            height: parent.height
+            width: parent.width
+        }
     }
 
     Qaterial.FabButton {
