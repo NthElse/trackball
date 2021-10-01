@@ -6,6 +6,12 @@ A [todo.txt](http://todotxt.org/) desktop app. Written in C++ & Qt Quick.
 
 ![](./assets/ss.png)
 
+## Features
+
+- Material Design ~~(Only UI elements)~~
+- Fast
+- Small
+
 ## Dependencies
 
 - Qt 5
