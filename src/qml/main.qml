@@ -36,17 +36,17 @@ Qaterial.ApplicationWindow {
 
     Column {
         anchors.fill: parent
-        anchors.margins: 10
+        anchors.leftMargin: 10
+        anchors.rightMargin: 10
 
         Row {
-            Qaterial.OutlineButton {
-                text: "Create"
-                id: createOutButton
+            id: toolbar
+            Qaterial.SquareButton {
+                id: createSquareButton
                 icon.source: Qaterial.Icons.plus
             }
-            Qaterial.OutlineButton {
-                text: "Search"
-                id: searchOutButton
+            Qaterial.SquareButton {
+                id: searchSquareButton
                 icon.source: Qaterial.Icons.magnify
             }
         }
@@ -54,7 +54,7 @@ Qaterial.ApplicationWindow {
         TodoList {
             id: todoList
             clip: true
-            height: parent.height
+            height: parent.height-toolbar.height-5
             width: parent.width
         }
     }

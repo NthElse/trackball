@@ -13,10 +13,12 @@ Item {
         width: parent.width
         height: parent.height
         color: mouseArea.containsMouse ? Qaterial.Style.colorTheme.background1 : Qaterial.Style.colorTheme.background12
+        border.color: Qaterial.Style.dividersColor()
+        border.width: 1
         radius: Qaterial.Style.card.radius
         layer.enabled: mouseArea.containsMouse
         layer.effect: Qaterial.ElevationEffect {
-            elevation: 3
+            elevation: 1
         }
         MouseArea {
             id: mouseArea
