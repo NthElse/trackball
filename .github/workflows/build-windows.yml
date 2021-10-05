@@ -41,12 +41,11 @@ jobs:
         cmake --install .
         ls Release
 # Upload -----------------------------------------------------
-    - name: Zip
-      shell: pwsh
-      run: Compress-Archive -Path .\Release -DestinationPath .\Release.zip
+    - name: Generate 7z
+      run: cd build && 7z a ../trackball.7z -- ./Release
     - name: Upload a Artifact
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: trackball.windows.zip
-        path: .\Release.zip
+        name: trackball-${{ github.sha }}-Windows.7z
+        path: .\trackball.zip
