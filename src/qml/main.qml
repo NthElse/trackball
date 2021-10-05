@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 import Qaterial 1.0 as Qaterial
+import Qt.labs.platform 1.1
 
 Qaterial.ApplicationWindow {
     id: window
