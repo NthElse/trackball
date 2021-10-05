@@ -43,7 +43,6 @@ jobs:
 # Upload -----------------------------------------------------
     - name: Generate 7z
       run: cd build && 7z a ../trackball.7z -- ./Release
-    - name: Upload a Artifact
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
