@@ -27,5 +27,5 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release 
         cmake --build .
