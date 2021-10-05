@@ -7,7 +7,7 @@ import Qaterial 1.0 as Qaterial
 // for windeployqt
 import Qt.labs.platform 1.1
 import Qt.labs.settings 1.0
-import Qt.labs.folderlistmodel
+import Qt.labs.folderlistmodel 2.14
 
 Qaterial.ApplicationWindow {
     id: window
