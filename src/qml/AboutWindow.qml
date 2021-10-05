@@ -6,16 +6,13 @@ Qaterial.Dialog {
     x: (parent.width - width) / 2
     y: (parent.height - height) / 2
     title: qsTr("🖲️ About Trackball")
-    font.family: "Lato"
     Column {
         Qaterial.Label {
             text: "A <a href=\"http://todotxt.org/\">todo.txt</a> desktop app. Written in C++ & Qt Quick. <br/>"
-            font.family: "Lato"
             onLinkActivated: Qt.openUrlExternally(link)
         }
         Qaterial.LabelOverline {
             text: "Made with 🦄 by <a href=\"https://github.com/NthElse\">Nothing Else Lab.</a>"
-            font.family: "Lato"
             onLinkActivated: Qt.openUrlExternally(link)
         }
     }
