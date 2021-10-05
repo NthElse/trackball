@@ -38,4 +38,5 @@ jobs:
         cd build
         cmake .. -GNinja
         cmake --build .
+        cmake --install .
         ls
