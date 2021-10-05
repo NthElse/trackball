@@ -47,4 +47,4 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         name: trackball-${{ github.sha }}-Windows.7z
-        path: .\trackball.zip
+        path: .\trackball.7z
