@@ -48,5 +48,5 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
-        name: trackball.zip
+        name: trackball.windows.zip
         path: .\Release.zip
