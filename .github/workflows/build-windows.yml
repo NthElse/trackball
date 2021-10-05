@@ -27,7 +27,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-//-----------------------------------------------------
+#-----------------------------------------------------
     - name: Build
       shell: bash
       env: 
