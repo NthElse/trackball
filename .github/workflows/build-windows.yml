@@ -27,6 +27,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
+# Build -----------------------------------------------------
     - name: Build
       shell: bash
       env: 
@@ -35,5 +36,15 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -GNinja
-        cmake --build .
+        cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=Release 
+        cmake --build  .
+        cmake --install .
+        ls Release
+# Upload -----------------------------------------------------
+    - name: Generate 7z
+      run: cd build && 7z a ../trackball.7z -- ./Release
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: trackball-${{ github.sha }}-Windows.7z
+        path: .\trackball.7z

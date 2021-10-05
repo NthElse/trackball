@@ -3,6 +3,12 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 import Qaterial 1.0 as Qaterial
 
+// Qt.labs in Qaterial
+// for windeployqt
+import Qt.labs.platform 1.1
+import Qt.labs.settings 1.0
+import Qt.labs.folderlistmodel 2.14
+
 Qaterial.ApplicationWindow {
     id: window
 
