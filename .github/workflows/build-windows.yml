@@ -37,6 +37,6 @@ jobs:
         mkdir build
         cd build
         cmake .. -GNinja
-        cmake --build .
+        cmake --build . -DCMAKE_BUILD_TYPE=Release ..  
         cmake --install .
         ls
