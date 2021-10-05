@@ -70,3 +70,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_import_qml_plugins(trackball)
     qt_finalize_executable(trackball)
 endif()
+
+if(WIN32)
+    # install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION .)
+    set(APPS "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}.exe")
+endif()
