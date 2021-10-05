@@ -39,4 +39,4 @@ jobs:
         cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=Release 
         cmake --build  .
         cmake --install .
-        ls
+        ls Release
