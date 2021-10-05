@@ -27,7 +27,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-#-----------------------------------------------------
+# Build -----------------------------------------------------
     - name: Build
       shell: bash
       env: 
@@ -40,3 +40,13 @@ jobs:
         cmake --build  .
         cmake --install .
         ls Release
+# Upload -----------------------------------------------------
+    - name: Zip
+      shell: pwsh
+      run: Compress-Archive -Path .\Release -DestinationPath .\Release.zip
+    - name: Upload a Artifact
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: trackball.zip
+        path: .\Release.zip
