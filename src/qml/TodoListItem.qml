@@ -45,7 +45,6 @@ Item {
                 }
                 Qaterial.Label {
                     text: description
-                    font.family: "Lato"
                 }
             }
         }
